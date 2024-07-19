@@ -1,0 +1,21 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "Stock",
+        "Service": "/TestProject/Services/com_sap_edm_sampleservice_v4.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "LotSize": "#Control:LotSize/#Value",
+        "MinStock": "#Control:MinStock/#Value",
+        "ProductID": "#Control:ProductID/#SelectedValue",
+        "Quantity": "#Control:Quantity/#Value",
+        "QuantityLessMin": "#Control:QuantityLessMin/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/TestProject/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/TestProject/Actions/UpdateEntityFailureMessage.action"
+}

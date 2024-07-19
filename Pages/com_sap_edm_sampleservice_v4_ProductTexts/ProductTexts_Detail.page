@@ -1,0 +1,84 @@
+{
+	"Caption": "ProductText Detail",
+	"DesignTimeTarget": {
+		"Service": "/TestProject/Services/com_sap_edm_sampleservice_v4.service",
+		"EntitySet": "ProductTexts",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/TestProject/Actions/com_sap_edm_sampleservice_v4/ProductTexts/NavToProductTexts_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/TestProject/Rules/com_sap_edm_sampleservice_v4/ProductTexts/ProductTexts_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{Name}",
+						"Subhead": "{ID}",
+						"BodyText": "",
+						"Footnote": "{LongDescription}",
+						"Description": "{Language}",
+						"StatusText": "{ProductID}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{ShortDescription}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "ID",
+							"Value": "{ID}"
+						},
+						{
+							"KeyName": "Language",
+							"Value": "{Language}"
+						},
+						{
+							"KeyName": "LongDescription",
+							"Value": "{LongDescription}"
+						},
+						{
+							"KeyName": "Name",
+							"Value": "{Name}"
+						},
+						{
+							"KeyName": "ProductID",
+							"Value": "{ProductID}"
+						},
+						{
+							"KeyName": "ShortDescription",
+							"Value": "{ShortDescription}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "ProductTexts_Detail",
+	"PrefersLargeCaption": true
+}

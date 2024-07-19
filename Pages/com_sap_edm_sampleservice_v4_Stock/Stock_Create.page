@@ -1,0 +1,77 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/TestProject/Actions/CloseModalPage_Cancel.action",
+				"Position": "Left",
+				"SystemItem": "Cancel"
+			},
+			{
+				"OnPress": "/TestProject/Actions/com_sap_edm_sampleservice_v4/Stock/Stock_CreateEntity.action",
+				"Position": "Right",
+				"SystemItem": "Save"
+			}
+		]
+	},
+	"Caption": "Create Stock Detail",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "LotSize",
+							"KeyboardType": "Number",
+							"_Name": "LotSize",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "MinStock",
+							"KeyboardType": "Number",
+							"_Name": "MinStock",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "ProductID",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"IsEditable": true,
+							"IsPickerDismissedOnSelection": true,
+							"IsSelectedSectionEnabled": true,
+							"PickerItems": {
+								"DisplayValue": "{Name}",
+								"ReturnValue": "{ProductID}",
+								"Target": {
+									"EntitySet": "Products",
+									"Service": "/TestProject/Services/com_sap_edm_sampleservice_v4.service"
+								}
+							},
+							"_Name": "ProductID",
+							"_Type": "Control.Type.FormCell.ListPicker"
+						},
+						{
+							"Caption": "Quantity",
+							"KeyboardType": "Number",
+							"_Name": "Quantity",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"_Name": "QuantityLessMin",
+							"Caption": "QuantityLessMin",
+							"Value": false,
+							"_Type": "Control.Type.FormCell.Switch"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Stock_Create",
+	"PrefersLargeCaption": true
+}

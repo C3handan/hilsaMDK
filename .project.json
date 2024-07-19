@@ -1,0 +1,53 @@
+{
+	"Credential": "cf",
+	"Template": {
+		"Id": "@ext-mdkvsc-npm-dev/generator-mdk",
+		"Name": "CRUD",
+		"Version": "0.0.1"
+	},
+	"CF": {
+		"Target": "https://api.cf.us10-001.hana.ondemand.com",
+		"Organization": "f19145c2-8898-4e98-b1d6-84e58b6f55b3",
+		"Space": "dfc5e4cf-d0c1-44f7-b91f-99ce55c95912",
+		"Deploy": {
+			"Description": "",
+			"WebClient": {
+				"Runtime": "",
+				"URL": ""
+			},
+			"Destination": [
+				{
+					"CF": "",
+					"MDK": "com.sap.edm.sampleservice.v4",
+					"URL": ""
+				}
+			]
+		}
+	},
+	"MobileService": {
+		"Type": "standard",
+		"AdminAPI": "https://mobile-service-cockpit-api.cfapps.us10.hana.ondemand.com/cockpit/v1/org/f19145c2-8898-4e98-b1d6-84e58b6f55b3/space/dfc5e4cf-d0c1-44f7-b91f-99ce55c95912",
+		"AppId": "com.mobileser.ch.demo",
+		"Destination": [
+			"com.sap.edm.sampleservice.v4"
+		]
+	},
+	"Onboarding": {
+		"Schema": "sapmobilesvcs",
+		"TimeZone": "UTC",
+		"URL": "sapmobilesvcs://?AppId=com.mobileser.ch.demo&ClientId=6b20f3e6-fafd-47b3-906f-94f8aebc91e0&SapCloudPlatformEndpoint=https://43fd74c0trial-dev-com-mobileser-ch-demo.cfapps.us10-001.hana.ondemand.com&AuthorizationEndpointUrl=https://43fd74c0trial-dev-com-mobileser-ch-demo.cfapps.us10-001.hana.ondemand.com/oauth2/api/v1/authorize&RedirectUrl=https://43fd74c0trial-dev-com-mobileser-ch-demo.cfapps.us10-001.hana.ondemand.com&TokenUrl=https://43fd74c0trial-dev-com-mobileser-ch-demo.cfapps.us10-001.hana.ondemand.com/oauth2/api/v1/token"
+	},
+	"LCAP": {
+		"FullName": "",
+		"Service": [],
+		"sourceTemplate": {
+			"id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+			"version": "1.40.12"
+		}
+	},
+	"Build": {
+		"SourceMap": true,
+		"TSTarget": "es6",
+		"WMF": true
+	}
+}

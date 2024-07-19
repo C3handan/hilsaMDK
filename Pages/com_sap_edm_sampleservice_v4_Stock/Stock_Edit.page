@@ -1,0 +1,86 @@
+{
+	"Caption": "Update Stock Detail",
+	"DesignTimeTarget": {
+		"Service": "/TestProject/Services/com_sap_edm_sampleservice_v4.service",
+		"EntitySet": "Stock",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"SystemItem": "Cancel",
+				"OnPress": "/TestProject/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/TestProject/Actions/com_sap_edm_sampleservice_v4/Stock/Stock_UpdateEntity.action"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "LotSize",
+							"_Name": "LotSize",
+							"Value": "{LotSize}",
+							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "MinStock",
+							"_Name": "MinStock",
+							"Value": "{MinStock}",
+							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "ProductID",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"IsPickerDismissedOnSelection": true,
+							"IsSelectedSectionEnabled": true,
+							"PickerItems": {
+								"DisplayValue": "{Name}",
+								"ReturnValue": "{ProductID}",
+								"Target": {
+									"EntitySet": "Products",
+									"Service": "/TestProject/Services/com_sap_edm_sampleservice_v4.service"
+								}
+							},
+							"Value": "{ProductID}",
+							"_Name": "ProductID",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"IsEditable": false
+						},
+						{
+							"Caption": "Quantity",
+							"_Name": "Quantity",
+							"Value": "{Quantity}",
+							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"_Name": "QuantityLessMin",
+							"Caption": "QuantityLessMin",
+							"Value": "{QuantityLessMin}",
+							"_Type": "Control.Type.FormCell.Switch"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Stock_Edit",
+	"PrefersLargeCaption": true
+}

@@ -1,0 +1,73 @@
+{
+	"Caption": "ProductTexts",
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/TestProject/Actions/com_sap_edm_sampleservice_v4/ProductTexts/NavToProductTexts_Create.action",
+				"Position": "Right",
+				"SystemItem": "Add"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Header": {
+						"UseTopPadding": false
+					},
+					"ObjectCell": {
+						"AccessoryType": "DisclosureIndicator",
+						"Description": "{Language}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"OnPress": "/TestProject/Actions/com_sap_edm_sampleservice_v4/ProductTexts/NavToProductTexts_Detail.action",
+						"StatusImage": "",
+						"Title": "{Name}",
+						"Footnote": "{LongDescription}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{ProductID}",
+						"Subhead": "{ID}",
+						"SubstatusText": "{ShortDescription}"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Search": {
+						"Enabled": true,
+						"Placeholder": "Item Search",
+						"BarcodeScanner": true,
+						"Delay": 500,
+						"MinimumCharacterThreshold": 3
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": true,
+						"LoadingIndicatorText": "Loading more items, please wait..."
+					},
+					"Target": {
+						"EntitySet": "ProductTexts",
+						"Service": "/TestProject/Services/com_sap_edm_sampleservice_v4.service",
+						"QueryOptions": ""
+					},
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": "Loading, please wait..."
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "ProductTexts_List",
+	"PrefersLargeCaption": true
+}

@@ -1,0 +1,80 @@
+{
+	"Caption": "Stock Detail",
+	"DesignTimeTarget": {
+		"Service": "/TestProject/Services/com_sap_edm_sampleservice_v4.service",
+		"EntitySet": "Stock",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/TestProject/Actions/com_sap_edm_sampleservice_v4/Stock/NavToStock_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/TestProject/Rules/com_sap_edm_sampleservice_v4/Stock/Stock_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{ProductID}",
+						"Subhead": "{LotSize}",
+						"BodyText": "",
+						"Footnote": "{Quantity}",
+						"Description": "{MinStock}",
+						"StatusText": "{QuantityLessMin}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": ""
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "LotSize",
+							"Value": "{LotSize}"
+						},
+						{
+							"KeyName": "MinStock",
+							"Value": "{MinStock}"
+						},
+						{
+							"KeyName": "ProductID",
+							"Value": "{ProductID}"
+						},
+						{
+							"KeyName": "Quantity",
+							"Value": "{Quantity}"
+						},
+						{
+							"KeyName": "QuantityLessMin",
+							"Value": "{QuantityLessMin}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Stock_Detail",
+	"PrefersLargeCaption": true
+}

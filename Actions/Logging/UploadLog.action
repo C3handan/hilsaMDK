@@ -1,0 +1,10 @@
+{
+    "ActionResult": {
+        "_Name": "UploadLog"
+    },
+    "ActivityIndicatorText": "Uploading...",
+    "OnFailure": "/TestProject/Actions/Logging/LogUploadFailure.action",
+    "OnSuccess": "/TestProject/Actions/Logging/LogUploadSuccessful.action",
+    "ShowActivityIndicator": false,
+    "_Type": "Action.Type.Logger.Upload"
+}
