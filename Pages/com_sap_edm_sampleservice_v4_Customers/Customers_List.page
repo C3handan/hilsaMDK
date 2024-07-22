@@ -1,73 +1,110 @@
 {
-	"Caption": "Customers",
-	"ActionBar": {
-		"Items": [
-			{
-				"OnPress": "/TestProject/Actions/com_sap_edm_sampleservice_v4/Customers/NavToCustomers_Create.action",
-				"Position": "Right",
-				"SystemItem": "Add"
-			}
-		]
-	},
 	"Controls": [
 		{
-			"Sections": [
-				{
-					"Header": {
-						"UseTopPadding": false
+			"_Type": "Control.Type.SectionedTable",
+			"Target": {
+				"Service": "/TestProject/Services/com_sap_edm_sampleservice_v4.service",
+				"EntitySet": "{@odata.readLink}/Customers"
+			},
+			"_Name": "SectionedTable",
+			"Section": {
+				"Header": {
+					"_Name": "SectionHeader0",
+					"AccessoryType": "None",
+					"UseTopPadding": false
+				},
+				"_Type": "Section.Type.ObjectTable",
+				"Target": {
+					"EntitySet": "Customers",
+					"Service": "/TestProject/Services/com_sap_edm_sampleservice_v4.service",
+					"QueryOptions": ""
+				},
+				"_Name": "SectionObjectTable0",
+				"Visible": true,
+				"EmptySection": {
+					"Caption": "No record found!",
+					"FooterVisible": false
+				},
+				"Separators": {
+					"TopSectionSeparator": false,
+					"BottomSectionSeparator": true,
+					"HeaderSeparator": true,
+					"FooterSeparator": true,
+					"ControlSeparator": true
+				},
+				"ObjectCell": {
+					"Title": "{FirstName}",
+					"Subhead": "{City}",
+					"Footnote": "{CustomerID}",
+					"Description": "{Country}",
+					"StatusText": "{DateOfBirth}",
+					"SubstatusText": "{EmailAddress}",
+					"PreserveIconStackSpacing": false,
+					"AccessoryType": "DisclosureIndicator",
+					"Tags": [],
+					"AvatarStack": {
+						"Avatars": [
+							{
+								"Image": ""
+							}
+						],
+						"ImageIsCircular": false,
+						"ImageHasBorder": false
 					},
-					"ObjectCell": {
-						"AccessoryType": "DisclosureIndicator",
-						"Description": "{Country}",
-						"AvatarStack": {
-							"Avatars": [
-								{
-									"Image": ""
-								}
-							],
-							"ImageIsCircular": false
-						},
-						"Icons": [],
-						"OnPress": "/TestProject/Actions/com_sap_edm_sampleservice_v4/Customers/NavToCustomers_Detail.action",
-						"StatusImage": "",
-						"Title": "{FirstName}",
-						"Footnote": "{CustomerID}",
-						"PreserveIconStackSpacing": false,
-						"StatusText": "{DateOfBirth}",
-						"Subhead": "{City}",
-						"SubstatusText": "{EmailAddress}"
+					"AvatarGrid": {
+						"ImageIsCircular": true
 					},
-					"EmptySection": {
-						"Caption": "No record found!"
-					},
-					"Search": {
-						"Enabled": true,
-						"Placeholder": "Item Search",
-						"BarcodeScanner": true,
-						"Delay": 500,
-						"MinimumCharacterThreshold": 3
-					},
-					"DataPaging": {
-						"ShowLoadingIndicator": true,
-						"LoadingIndicatorText": "Loading more items, please wait..."
-					},
-					"Target": {
-						"EntitySet": "Customers",
-						"Service": "/TestProject/Services/com_sap_edm_sampleservice_v4.service",
-						"QueryOptions": ""
-					},
-					"_Type": "Section.Type.ObjectTable"
-				}
-			],
+					"OnPress": "/TestProject/Actions/com_sap_edm_sampleservice_v4/Customers/NavToCustomers_Detail.action",
+					"Selected": false,
+					"ContextMenu": {
+						"Items": [],
+						"PerformFirstActionWithFullSwipe": true,
+						"LeadingItems": [],
+						"TrailingItems": []
+					}
+				},
+				"Search": {
+					"Enabled": true,
+					"Placeholder": "Item Search",
+					"BarcodeScanner": true,
+					"Delay": 500,
+					"MinimumCharacterThreshold": 3
+				},
+				"DataPaging": {
+					"ShowLoadingIndicator": true,
+					"LoadingIndicatorText": "Loading more items, please wait..."
+				},
+				"HighlightSelectedItem": false
+			},
 			"LoadingIndicator": {
 				"Enabled": true,
 				"Text": "Loading, please wait..."
 			},
-			"_Type": "Control.Type.SectionedTable",
-			"_Name": "SectionedTable"
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
 		}
 	],
 	"_Type": "Page",
 	"_Name": "Customers_List",
-	"PrefersLargeCaption": true
+	"Caption": "Customers",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Add",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/TestProject/Actions/com_sap_edm_sampleservice_v4/Customers/NavToCustomers_Create.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	},
+	"DesignTimeTarget": {
+		"Service": "/TestProject/Services/com_sap_edm_sampleservice_v4.service",
+		"EntitySet": "Customers"
+	}
 }
